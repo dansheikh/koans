@@ -34,7 +34,7 @@ def _make_change(amt, vals, idx, ledger):
     return ways
 
 
-def make_change(amt, vals, idx):
+def make_change(amt, vals, idx=0):
     """Counts the number of possible change combinations.
 
     Args:
