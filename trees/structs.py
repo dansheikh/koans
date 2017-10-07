@@ -1,9 +1,9 @@
 class Node():
 
-    def __init__(self, val, left, right):
+    def __init__(self, val, children, name=None):
         self._val = val
-        self._left = left
-        self._right = right
+        self._children = children
+        self._name = name
 
     @property
     def val(self):
@@ -14,17 +14,31 @@ class Node():
         self._val = val
 
     @property
-    def left(self):
-        return self._left
+    def children(self):
+        return self._children
 
-    @left.setter
-    def left(self, node):
-        self._left = node
+    @children.setter
+    def children(self, children):
+        self._children = children
 
     @property
-    def right(self):
-        return self._right
+    def name(self):
+        return self._name
 
-    @right.setter
-    def right(self, node):
-        self._right = node
+    @name.setter
+    def name(self, name):
+        self._name = name
+
+
+class Graph():
+
+    def __init__(self, root):
+        self._root = root
+
+    @property
+    def root(self):
+        return self._root
+
+    @root.setter
+    def root(self, root):
+        self._root = root
